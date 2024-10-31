@@ -14,6 +14,12 @@ function getDatabaseName() {
   return (process.env.NODE_ENV === "test")
       ? "jobly_test"
       : process.env.DATABASE_URL || "jobly";
+};
+
+function getDatabaseUri() {
+  return (process.env.NODE_ENV === "test")
+      ? "jobly_test"
+      : process.env.DATABASE_URL || "jobly";
 }
 
 // Speed up bcrypt during tests, since the algorithm safety isn't being tested
@@ -33,4 +39,5 @@ module.exports = {
   PORT,
   BCRYPT_WORK_FACTOR,
   getDatabaseName,
+  getDatabaseUri
 };
