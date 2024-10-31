@@ -2,7 +2,9 @@
 /** Database setup for jobly. */
 const { Client } = require("pg");
 const { getDatabaseName, getDatabaseUri } = require("./config");
-const password = require("./secretpassword")
+
+/** uncomment out for local development */
+//const password = require("./secretpassword")
 
 let db;
 
